@@ -16,6 +16,11 @@ function submitText() {
 	
     $("#answer").text(!Math.round(Math.random()));
     
-    navigator.notification.beep(1);
+    if (answer = true){
+        navigator.notification.beep(1);
+    };
+    
+    if (answer = false){
     navigator.notification.beep(2);
+    };
 }
