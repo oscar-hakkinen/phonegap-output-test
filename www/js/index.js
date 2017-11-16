@@ -14,13 +14,15 @@ $(document).on("pagecreate","#pageone",function(){
 
 function submitText() {
 	
-    $("#answer").text(!Math.round(Math.random()));
+    var answer = $("#answer").text(!Math.round(Math.random()));
     
-    if (answer = true){
+    
+  
+    if (answer == true){
         navigator.notification.beep(1);
     };
     
-    if (answer = false){
+    if (answer == false){
     navigator.notification.beep(2);
     };
 }
