@@ -1,28 +1,23 @@
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    console.log(navigator.notification);
-}
 
-
-$(document).on("pagecreate","#pageone",function(){
-  $('#submitButton').on("click", function(){
+$(document).on("pagecreate", "#pageone", function() {
+  $('#submitButton').on("click", function() {
     submitText();
   });            
 });            
 
-
-
 function submitText() {
 	
-    var answer = $("#answer").text(!Math.round(Math.random()));
+    var answer = !Math.round(Math.random())
     
+    $("#answer").text(answer);
+
     
   
     if (answer == true){
         navigator.notification.beep(1);
-    };
-    
-    if (answer == false){
+        console.log("true");
+    }else {
     navigator.notification.beep(2);
+        console.log("false");
     };
-}
+};
