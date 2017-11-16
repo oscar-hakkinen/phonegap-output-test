@@ -14,10 +14,12 @@ function submitText() {
     
   
     if (answer == true){
+           console.log("true");
         navigator.notification.beep(1);
-        console.log("true");
-    }else {
+        navigator.vibrate(2000);
+     
+    } else {
+         console.log("false");
     navigator.notification.beep(2);
-        console.log("false");
     };
 };
